@@ -42,5 +42,5 @@ app.post('/create', async (req, res) => {
     }
   });
 });
-
-app.listen(80);
+const port = process.env.PORT || 80
+app.listen(port);
