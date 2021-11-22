@@ -44,3 +44,6 @@ docker run -p 80:3000 -d --rm --name <app new name> <image id>
 docker volume --help
 docker volume rm VOL_NAME 
 docker volume prune
+
+# with env Variable
+docker run -d --rm --env-file ./.env --build-arg DEFAULT_PORT
