@@ -37,8 +37,8 @@ docker run -p 80:3000 -d --rm --name <app new name> <image id>
 
   # with volumes attached
   docker run -p 80:3000 -d --rm --name <app new name> -v localStorage:/app/containerStroage <image id>
-  # with BindMount
-    docker run -p 80:3000 -d --rm --name <app new name> -v localStorage:/app/containerStroage -v "localPath"%cd%":/app" -v /app/node_modules <image id>
+  # with Bind Mount
+  docker run -p 80:3000 -d --rm --name <app new name> -v dockerStorage:/app/containerStroage -v "localPath"%cd%":/app" -v /app/node_modules -v /app/temp <image id>
 
 # rm volumes
 docker volume --help
