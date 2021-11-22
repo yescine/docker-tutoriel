@@ -35,16 +35,12 @@ docker cp folder/. <container name>:/test
 docker build -t goals:v1.0.0 .
 docker run -p 80:3000 -d --rm --name <app new name> <image id>
 
+  # with volumes attached
+  docker run -p 80:3000 -d --rm --name <app new name> -v localStorage:/app/containerStroage <image id>
+  # with BindMount
+    docker run -p 80:3000 -d --rm --name <app new name> -v localStorage:/app/containerStroage -v "localPath"%cd%":/app" -v /app/node_modules <image id>
 
-
-
-
-
-
-
-
-
-
-
-
-
+# rm volumes
+docker volume --help
+docker volume rm VOL_NAME 
+docker volume prune
