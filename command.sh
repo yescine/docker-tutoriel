@@ -56,3 +56,7 @@ docker container inspect <container name id> # search get IP adress
 docker network create <net name>
 docker run --name <container name> ... --network <network name >
 docker network ls
+
+# docker compose
+docker-compose up -d --build
+docker-compose down
