@@ -47,3 +47,12 @@ docker volume prune
 
 # with env Variable
 docker run -d --rm --env-file ./.env --build-arg DEFAULT_PORT
+
+# Cross container commnication
+# add host.docker.internal for any localhost container connection
+docker container inspect <container name id> # search get IP adress
+
+# Networks
+docker network create <net name>
+docker run --name <container name> ... --network <network name >
+docker network ls
