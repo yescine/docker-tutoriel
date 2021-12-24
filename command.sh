@@ -60,3 +60,5 @@ docker network ls
 # docker compose
 docker-compose up -d --build
 docker-compose down
+
+docker-compose run --rm <service name> <command name> --pref-dist <dir> .
